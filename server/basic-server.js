@@ -1,5 +1,13 @@
 /* Import node's http module: */
 var http = require("http");
+var handleRequest = require('./request-handler.js').handler;
+var express = require('express');
+var app = express();
+
+app.set('port',process.env.PORT || 3000)
+
+
+
 
 
 /* Every server needs to listen on a port with a unique number. The
